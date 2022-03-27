@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wemsit/static/css/main.d8eddf90.css",
+    "main.js": "/wemsit/static/js/main.cd11df82.js",
+    "static/js/787.d9823151.chunk.js": "/wemsit/static/js/787.d9823151.chunk.js",
+    "static/media/home.jpg": "/wemsit/static/media/home.0835819a63b5cb85a808.jpg",
+    "index.html": "/wemsit/index.html",
+    "main.d8eddf90.css.map": "/wemsit/static/css/main.d8eddf90.css.map",
+    "main.cd11df82.js.map": "/wemsit/static/js/main.cd11df82.js.map",
+    "787.d9823151.chunk.js.map": "/wemsit/static/js/787.d9823151.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8eddf90.css",
+    "static/js/main.cd11df82.js"
+  ]
+}
