@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { NavbarComponent } from "./components/Navbar/Navbar";
-import { ITodos } from "./components/TodoComponents/TodosComponent";
 import About from "./components/TabComponents/AboutComponent";
 import Blog from "./components/TabComponents/BlogComponent";
 import { Login } from "./components/Home/LoginComponent";
