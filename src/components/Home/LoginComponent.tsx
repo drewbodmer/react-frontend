@@ -11,7 +11,7 @@ import axios from "axios";
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
 
-const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       display: "flex",
@@ -97,7 +97,11 @@ const reducer = (state: State, action: Action): State => {
   }
 };
 
-export function Login() {
+interface LoginProps {
+  login: (token: string) => void;
+}
+
+export function Login(props: LoginProps) {
   const classes = useStyles();
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -117,15 +121,10 @@ export function Login() {
 
   const handleLogin = () => {
     const login = { username: state.username, password: state.password }
-    axios.post('http://localhost:8000/login', login)
+    axios.post('http://localhost:8000/login/', login)
       .then(response => {
-        console.log(response.status);
-        console.log(response.data);
         if (response.status === 200) {
-          dispatch({
-            type: "loginSuccess",
-            payload: "Login Successfully",
-          });
+          props.login(response.data);
         } else {
           dispatch({
             type: "loginFailed",
@@ -161,7 +160,7 @@ export function Login() {
   return (
     <form className={classes.container} noValidate autoComplete="off">
       <Card className={classes.card}>
-        <CardHeader className={classes.header} title="Login App" />
+        <CardHeader className={classes.header} title="Login" />
         <CardContent>
           <div>
             <TextField
