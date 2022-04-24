@@ -9,6 +9,22 @@
 .card {
   width: "18rem";
 }
+
 .card:hover {
   background-color: aliceblue;
+}
+
+.modal {
+  top: 0px;
+  right: 100px;
+}
+
+.modal-header {
+  max-height: 50px;
+}
+
+.modal-pdf-body {
+  top: 0px;
+  height: 85vh;
+  max-height: 100vh;
 }

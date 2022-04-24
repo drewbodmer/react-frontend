@@ -1,6 +1,5 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import { TokenContext } from "../../context/GlobalState";
 export function SearchTracking() {
   // const token = React.useContext(TokenContext);
   return (

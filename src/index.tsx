@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -13,7 +14,6 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
       </Routes>
     </Router>
-    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

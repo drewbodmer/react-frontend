@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-enum Type {
+export enum Type {
   BOOK = "Book",
   NOTE = "Note",
   IDEA = "Idea",
@@ -8,14 +8,29 @@ enum Type {
   PAPER = "Paper",
 }
 
-interface BlogEntry {
+export interface BlogEntry {
   type: Type;
   title: string;
   text: string;
   image?: string;
+  pdf?: string;
 }
 
-const blogs: Array<BlogEntry> = [
+export const blogs: Array<BlogEntry> = [
+  {
+    type: Type.PAPER,
+    title: `Backpropagation Calculus`,
+    text: ``,
+    pdf: `/assets/backprop.pdf`,
+    image: `https://i.ytimg.com/vi/Ilg3gGewQ5U/maxresdefault.jpg`
+  },
+  {
+    type: Type.PAPER,
+    title: `RNN/LSTM Headline Generator`,
+    text: ``,
+    pdf: `/assets/finalreport.pdf`,
+    image: `https://www.iarai.ac.at/wp-content/uploads/2021/02/MC-LSTM.jpg`
+  },
   {
     type: Type.NOTE,
     title: `Alternatives to Proof of Work`,
@@ -167,12 +182,6 @@ const blogs: Array<BlogEntry> = [
     type: Type.BOOK,
     title: "Indistractible",
     image: `https://images-na.ssl-images-amazon.com/images/I/41OWvxYMt0S._SX331_BO1,204,203,200_.jpg`,
-    text: ``,
-  },
-  {
-    type: Type.PAPER,
-    title: "LSTM for Headline Generation",
-    image: `./AI final report.pdf`,
     text: ``,
   },
 ];
