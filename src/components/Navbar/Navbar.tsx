@@ -73,11 +73,11 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
               {displayLoginOptions()}
               <NavDropdown title="Resumes" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="" eventKey="csresume">
-                  Software Engineering Resume
+                  Software Engineering
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="" eventKey="dsresume">
-                  Data Science Resume
+                  Data Science
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
