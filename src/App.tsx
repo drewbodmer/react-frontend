@@ -7,6 +7,7 @@ import { Login } from "./components/Home/LoginComponent";
 import { SearchTracking } from "./components/Home/searchTracking";
 import { TokenContext } from "./context/GlobalState";
 import { SearchUpload } from "./components/Home/SearchTrackingUpload";
+import { SoftwareEngineering, DataScience } from "./components/TabComponents/Resumes";
 
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
       return <SearchTracking />
     } else if (tab === "search_tracking_upload") {
       return <SearchUpload />
+    } else if (tab === "dsresume") {
+      return <DataScience />
+    } else if (tab === "csresume") {
+      return <SoftwareEngineering />
     } else {
       return <></>;
     }

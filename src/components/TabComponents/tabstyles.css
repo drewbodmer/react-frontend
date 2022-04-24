@@ -28,3 +28,9 @@
   height: 85vh;
   max-height: 100vh;
 }
+
+.modal-resume-body {
+  top: 0px;
+  height: 90vh;
+  max-height: 100vh;
+}

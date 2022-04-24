@@ -19,7 +19,7 @@ export default function Blog() {
 
   const displayPDF = (entry: BlogEntry): JSX.Element => {
     if (entry.type === Type.PAPER) {
-      return (<iframe src={entry.pdf} width="100%" height="100%" frameBorder="0" seamless={true} />)
+      return (<iframe src={entry.pdf} width="100%" height="100%" frameBorder="0" seamless={true} />);
     }
     return <></>
   }
