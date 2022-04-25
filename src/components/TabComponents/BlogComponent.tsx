@@ -3,6 +3,7 @@ import { Container, Card, Button, Row, Col, Modal } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import { blogs, Type, BlogEntry } from "../../data/writing";
 import "./tabstyles.css";
+import "../Home/Home.css"
 import Masonry from 'react-masonry-css';
 
 
@@ -53,11 +54,11 @@ export default function Blog() {
       {Array.from(blogs).map((entry, idx) => {
         return (
           <Container className="grid-item" style={{ padding: "15px" }}>
-            <Card className="card-pretty" style={{ width: "100%" }} onClick={handleShow(idx)}>
-              <Card.Header style={{ fontSize: '1.5vh' }}>{blogs[idx].type}</Card.Header>
+            <Card className="subtitle card-pretty" style={{ width: "100%" }} onClick={handleShow(idx)}>
+              <Card.Header className="subtitle" style={{ fontSize: '1.5vh' }}>{blogs[idx].type}</Card.Header>
               <Card.Img variant="top" src={blogs[idx].image} />
               <Card.Body>
-                <Card.Title className="modal-header">{blogs[idx].title}</Card.Title>
+                <Card.Title className="modal-header" style={{ paddingBottom: "40px" }}>{blogs[idx].title}</Card.Title>
               </Card.Body>
             </Card>
             <Modal
