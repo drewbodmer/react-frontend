@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbar-styles.css";
-import { TokenContext } from "../../context/GlobalState";
 
 import {
   Container,
@@ -14,18 +13,18 @@ interface NavTab {
 }
 
 
-
 export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
   // const token = React.useContext(TokenContext);
   const token = localStorage.getItem('token');
+  console.log(token);
   function displayLoginOptions() {
-    if (token !== "") {
+    if (token !== "" && token !== undefined && token !== null) {
       return (
         <>
-          <Nav.Link href="" eventKey="search_tracking_upload">
+          <Nav.Link className="navbar-link" href="" eventKey="search_tracking_upload">
             Search Tracking Upload
           </Nav.Link>
-          <Nav.Link href="" eventKey="logout">
+          <Nav.Link className="navbar-link" href="" eventKey="logout">
             Logout
           </Nav.Link>
         </>
@@ -33,10 +32,10 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
     } else {
       return (
         <>
-          <Nav.Link href="" eventKey="search_tracking">
+          {/* <Nav.Link href="" eventKey="search_tracking">
             Search Tracking
-          </Nav.Link>
-          <Nav.Link href="" eventKey="login">
+          </Nav.Link> */}
+          <Nav.Link className="navbar-link" href="" eventKey="login">
             Login
           </Nav.Link>
         </>
@@ -53,25 +52,25 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
     <>
       <Navbar className="navbar navbar-expand-lg" onSelect={handleNav}>
         <Container fluid>
-          <Navbar.Brand href="#">Drew Bodmer</Navbar.Brand>
+          {/* <Navbar.Brand href="#">Drew Bodmer</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
+              className="me-auto my-2 my-lg-0 navbar-link"
+              style={{ maxHeight: "100px", color: "#fffff" }}
               navbarScroll
             >
-              <Nav.Link href="" eventKey="">
+              <Nav.Link className="navbar-link" href="" eventKey="">
                 Home
               </Nav.Link>
-              <Nav.Link href="" eventKey="about">
+              {/* <Nav.Link href="" eventKey="about">
                 About
-              </Nav.Link>
-              <Nav.Link href="" eventKey="blog">
+              </Nav.Link> */}
+              <Nav.Link className="navbar-link" href="" eventKey="blog">
                 Blog
               </Nav.Link>
               {displayLoginOptions()}
-              <NavDropdown title="Resumes" id="navbarScrollingDropdown">
+              <NavDropdown className="navbar-link" title="Resume" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="" eventKey="csresume">
                   Software Engineering
                 </NavDropdown.Item>

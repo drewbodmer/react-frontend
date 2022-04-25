@@ -3,6 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  font-family: Montserrat;
 }
 
 .App-logo {
@@ -43,7 +44,17 @@
 .background {
   display: block;
   overflow: auto;
-  background: url("./data/home.jpg");
+  background: url("./data/newhome1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-home {
+  display: block;
+  overflow: auto;
+  background: url("./data/newhome1.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,6 +65,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -158,49 +158,51 @@ export function Login(props: LoginProps) {
     });
   };
   return (
-    <form className={classes.container} noValidate autoComplete="off">
-      <Card className={classes.card}>
-        <CardHeader className={classes.header} title="Login" />
-        <CardContent>
-          <div>
-            <TextField
-              error={state.isError}
-              fullWidth
-              id="username"
-              type="email"
-              label="Username"
-              placeholder="Username"
-              margin="normal"
-              onChange={handleUsernameChange}
-              onKeyPress={handleKeyPress}
-            />
-            <TextField
-              error={state.isError}
-              fullWidth
-              id="password"
-              type="password"
-              label="Password"
-              placeholder="Password"
-              margin="normal"
-              helperText={state.helperText}
-              onChange={handlePasswordChange}
-              onKeyPress={handleKeyPress}
-            />
-          </div>
-        </CardContent>
-        <CardActions>
-          <Button
-            variant="contained"
-            size="large"
-            color="secondary"
-            className={classes.loginBtn}
-            onClick={handleLogin}
-            disabled={state.isButtonDisabled}
-          >
-            Login
-          </Button>
-        </CardActions>
-      </Card>
-    </form>
+    <div style={{ height: "90vh" }}>
+      <form className={classes.container} noValidate autoComplete="off">
+        <Card className={classes.card}>
+          <CardHeader className={classes.header} title="Login" />
+          <CardContent>
+            <div>
+              <TextField
+                error={state.isError}
+                fullWidth
+                id="username"
+                type="email"
+                label="Username"
+                placeholder="Username"
+                margin="normal"
+                onChange={handleUsernameChange}
+                onKeyPress={handleKeyPress}
+              />
+              <TextField
+                error={state.isError}
+                fullWidth
+                id="password"
+                type="password"
+                label="Password"
+                placeholder="Password"
+                margin="normal"
+                helperText={state.helperText}
+                onChange={handlePasswordChange}
+                onKeyPress={handleKeyPress}
+              />
+            </div>
+          </CardContent>
+          <CardActions>
+            <Button
+              variant="contained"
+              size="large"
+              color="secondary"
+              className={classes.loginBtn}
+              onClick={handleLogin}
+              disabled={state.isButtonDisabled}
+            >
+              Login
+            </Button>
+          </CardActions>
+        </Card>
+      </form>
+    </div>
   );
 }

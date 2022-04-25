@@ -19,7 +19,9 @@ export default function Blog() {
 
   const displayPDF = (entry: BlogEntry): JSX.Element => {
     if (entry.type === Type.PAPER) {
-      return (<iframe src={entry.pdf} width="100%" height="100%" frameBorder="0" seamless={true} />);
+      return (<div style={{ height: "80vh" }}>
+        <iframe src={entry.pdf} width="100%" height="100%" frameBorder="0" seamless={true} />
+      </div>);
     }
     return <></>
   }
@@ -52,17 +54,15 @@ export default function Blog() {
               </Card>
               <Modal
                 className="modal"
-                top="0px"
                 size="xl"
                 show={show === idx}
                 fullscreen="xl-down"
-                height={entry.type === Type.PAPER ? "500px" : undefined}
                 onHide={handleClose}
               >
                 <Modal.Header closeButton>
                   <Modal.Title>{blogs[idx].title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className='modal-pdf-body'>
+                <Modal.Body>
                   {displayPDF(entry)}
                   <ReactMarkdown>{blogs[idx].text}</ReactMarkdown>
                 </Modal.Body>

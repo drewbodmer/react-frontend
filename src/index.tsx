@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
+    <link rel="stylesheet" href="https://use.typekit.net/qtb8irw.css"></link>
     <Router>
       <Routes>
         <Route path="/" element={<App />} />

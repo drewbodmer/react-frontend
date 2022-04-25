@@ -2,3 +2,13 @@
   background-color: blueviolet;
   border: 50px;
 }
+
+
+.navbar-link {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: bold;
+  color: "#fffff";
+}
