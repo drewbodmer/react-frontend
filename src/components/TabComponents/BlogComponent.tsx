@@ -53,7 +53,7 @@ export default function Blog() {
                 </Card.Body>
               </Card>
               <Modal
-                className="modal"
+                className="modal-open"
                 size="xl"
                 show={show === idx}
                 fullscreen="xl-down"

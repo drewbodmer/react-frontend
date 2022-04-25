@@ -15,11 +15,11 @@
   background-color: aliceblue;
 }
 
-.modal {
+.modal-open {
+  padding-right: 0 !important;
   top: 0px;
   right: 100px;
-  /* top: 0vh; */
-  /* size: xl; */
+  overflow-y: inherit !important;
 }
 
 .modal-header {

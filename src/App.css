@@ -1,8 +1,8 @@
 .App {
-  height: 100vh;
-  background-size: cover;
+  /* height: 100vh; */
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top left;
   font-family: Montserrat;
 }
 
@@ -51,17 +51,11 @@
   background-size: cover;
 }
 
-.background-home {
-  display: block;
-  overflow: auto;
-  background: url("./data/newhome1.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.modal-open {
+  overflow-y: inherit;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -69,4 +63,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
