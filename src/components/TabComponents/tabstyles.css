@@ -36,6 +36,11 @@
   max-height: 100vh;
 }
 
+.card-pretty {
+  box-shadow: 2px 2px 10px rgb(81, 81, 81);
+
+}
+
 .my-masonry-grid {
   display: -webkit-box;
   /* Not needed if autoprefixing */
@@ -50,12 +55,9 @@
 
 .grid-item {
   width: 25vw;
-  padding-bottom: 30px;
 }
 
 .my-masonry-grid_column {
-  padding-left: 30px;
-  padding-bottom: 30px;
   width: 25vw;
   /* gutter size */
   background-clip: padding-box;

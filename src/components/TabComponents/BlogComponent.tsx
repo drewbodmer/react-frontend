@@ -42,8 +42,8 @@ export default function Blog() {
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
-    700: 2,
-    500: 1
+    800: 2,
+    600: 1
   };
 
   return (
@@ -52,9 +52,9 @@ export default function Blog() {
       className="my-masonry-grid">
       {Array.from(blogs).map((entry, idx) => {
         return (
-          <Container className="grid-item">
-            <Card style={{ width: "100%" }} onClick={handleShow(idx)}>
-              <Card.Header>{blogs[idx].type}</Card.Header>
+          <Container className="grid-item" style={{ padding: "15px" }}>
+            <Card className="card-pretty" style={{ width: "100%" }} onClick={handleShow(idx)}>
+              <Card.Header style={{ fontSize: '1.5vh' }}>{blogs[idx].type}</Card.Header>
               <Card.Img variant="top" src={blogs[idx].image} />
               <Card.Body>
                 <Card.Title className="modal-header">{blogs[idx].title}</Card.Title>
