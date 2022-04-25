@@ -97,12 +97,6 @@ export const blogs: Array<BlogEntry> = [
   `,
   },
   {
-    type: Type.BOOK,
-    title: `"What is Real?"`,
-    image: `https://images-na.ssl-images-amazon.com/images/I/81r1LKkMkGL.jpg`,
-    text: `What is Real? is a book by Adam Becker that outlines the current problems that exist in the foundations of quantum physics, namely what the author calls the "Copenhagen interpretation". It outlines the history of quantum physics with an emphasis on how today's theories developed.`,
-  },
-  {
     type: Type.IDEA,
     title: `Proof of selection ideas`,
     image: `https://veritusgroup.com/wp-content/uploads/2017/01/consensus-accuracy-2.jpg`,
@@ -136,6 +130,12 @@ export const blogs: Array<BlogEntry> = [
   
   **Election system for new blocks**
   Election system remains the same, voting remains the same, but the way to campaign can be different`,
+  },
+  {
+    type: Type.BOOK,
+    title: `"What is Real?"`,
+    image: `https://images-na.ssl-images-amazon.com/images/I/81r1LKkMkGL.jpg`,
+    text: `What is Real? is a book by Adam Becker that outlines the current problems that exist in the foundations of quantum physics, namely what the author calls the "Copenhagen interpretation". It outlines the history of quantum physics with an emphasis on how today's theories developed.`,
   },
   {
     type: Type.BOOK,

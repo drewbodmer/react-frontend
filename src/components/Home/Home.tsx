@@ -1,5 +1,7 @@
 import React from "react";
 import './Home.css';
+import { BsChevronCompactDown } from 'react-icons/bs';
+import { IconContext } from "react-icons";
 
 export function Home() {
   return (
@@ -9,7 +11,11 @@ export function Home() {
           <h1 className="title">Drew Bodmer</h1>
           <h5 className="subtitle">Software Engineer | Levee Industries</h5>
           <p className="subtitle piccreds">Background: Dominican Republic (taken by me)</p>
+          <IconContext.Provider value={{ color: "white", size: "10vh", className: "global-class-name" }}>
+            <h3 style={{ paddingTop: "5vh", textAlign: "center" }}><BsChevronCompactDown /></h3>
+          </IconContext.Provider>
         </div>
+
       </div>
       <div style={{ width: "100vw", height: "100vh", background: "#303030", marginTop: "10vh", }}>
         <h1 style={{ paddingTop: "5vh" }} className="subtitle aboutheader">
