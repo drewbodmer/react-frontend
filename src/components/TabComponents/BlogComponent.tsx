@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, Button, Row, Col, Modal } from "react-bootstrap";
+import { Container, Card, Button, Row, Col, Modal } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import { blogs, Type, BlogEntry } from "../../data/writing";
 import "./tabstyles.css";
+import Masonry from 'react-masonry-css';
 
 
 export default function Blog() {
@@ -38,40 +39,46 @@ export default function Blog() {
     return <></>
 
   }
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1
+  };
 
   return (
-    <>
-      <Row xs={1} md={3} className="g-4">
-        {Array.from(blogs).map((entry, idx) => {
-          return (
-            <Col style={{ maxWidth: "20rem" }}>
-              <Card onClick={handleShow(idx)}>
-                <Card.Header>{blogs[idx].type}</Card.Header>
-                <Card.Img variant="top" src={blogs[idx].image} />
-                <Card.Body>
-                  <Card.Title className="modal-header">{blogs[idx].title}</Card.Title>
-                </Card.Body>
-              </Card>
-              <Modal
-                className="modal-open"
-                size="xl"
-                show={show === idx}
-                fullscreen="xl-down"
-                onHide={handleClose}
-              >
-                <Modal.Header closeButton>
-                  <Modal.Title>{blogs[idx].title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  {displayPDF(entry)}
-                  <ReactMarkdown>{blogs[idx].text}</ReactMarkdown>
-                </Modal.Body>
-                {entry.type === Type.PAPER ? displayFooter(false) : displayFooter(true)}
-              </Modal>
-            </Col>
-          );
-        })}
-      </Row>
-    </>
+    <Masonry
+      breakpointCols={breakpointColumnsObj}
+      className="my-masonry-grid">
+      {Array.from(blogs).map((entry, idx) => {
+        return (
+          <Container className="grid-item">
+            <Card style={{ width: "100%" }} onClick={handleShow(idx)}>
+              <Card.Header>{blogs[idx].type}</Card.Header>
+              <Card.Img variant="top" src={blogs[idx].image} />
+              <Card.Body>
+                <Card.Title className="modal-header">{blogs[idx].title}</Card.Title>
+              </Card.Body>
+            </Card>
+            <Modal
+              className="modal-open"
+              size="xl"
+              show={show === idx}
+              fullscreen="xl-down"
+              onHide={handleClose}
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>{blogs[idx].title}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {displayPDF(entry)}
+                <ReactMarkdown>{blogs[idx].text}</ReactMarkdown>
+              </Modal.Body>
+              {entry.type === Type.PAPER ? displayFooter(false) : displayFooter(true)}
+            </Modal>
+          </Container>
+        );
+      })}
+    </Masonry>
   );
 }

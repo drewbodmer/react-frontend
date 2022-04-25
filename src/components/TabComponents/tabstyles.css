@@ -36,6 +36,31 @@
   max-height: 100vh;
 }
 
+.my-masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px;
+  width: 100%;
+  /* gutter size offset */
+}
+
+
+.grid-item {
+  width: 25vw;
+  padding-bottom: 30px;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  width: 25vw;
+  /* gutter size */
+  background-clip: padding-box;
+}
+
 ul>li {
   display: auto;
   margin: auto;
