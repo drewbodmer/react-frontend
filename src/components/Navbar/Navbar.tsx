@@ -63,12 +63,20 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
               <Nav.Link className="navbar-link" href="" eventKey="">
                 Home
               </Nav.Link>
-              {/* <Nav.Link href="" eventKey="about">
-                About
-              </Nav.Link> */}
               <Nav.Link className="navbar-link" href="" eventKey="blog">
                 Blog
               </Nav.Link>
+              {/* <Nav.Link href="" eventKey="about">
+                About
+              </Nav.Link> */}
+              {/* <NavDropdown className="navbar-link" title="Blog" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="" eventKey="blog">
+                  General
+                </NavDropdown.Item>
+                <NavDropdown.Item href="" eventKey="portfolio">
+                  Writing Final Portfolio
+                </NavDropdown.Item>
+              </NavDropdown> */}
               {displayLoginOptions()}
               <NavDropdown className="navbar-link" title="Resume" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="" eventKey="csresume">

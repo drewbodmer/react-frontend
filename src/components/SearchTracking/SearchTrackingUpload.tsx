@@ -15,11 +15,11 @@ export function SearchUpload() {
         onSubmit={(e: React.SyntheticEvent) => {
           e.preventDefault();
           const target = e.target as typeof e.target & {
-            json: { value: JSON };
+            json: { value: Array<JSON> };
           };
           const json = target.json.value;
           const token = localStorage.getItem('token');
-          axios.post('http://localhost:8000/api/v1/add_search/', json, {
+          axios.post('http://localhost:8000/api/v1/update_db/', json, {
             headers: {
               'content-type': 'application/json', 'token': (token as string)
             }

@@ -14,6 +14,7 @@ export interface BlogEntry {
   text: string;
   image?: string;
   pdf?: string;
+  portfolio?: boolean;
 }
 
 export const blogs: Array<BlogEntry> = [
@@ -22,14 +23,16 @@ export const blogs: Array<BlogEntry> = [
     title: `Backpropagation Calculus`,
     text: ``,
     pdf: `/assets/backprop.pdf`,
-    image: `https://i.ytimg.com/vi/Ilg3gGewQ5U/maxresdefault.jpg`
+    image: `https://i.ytimg.com/vi/Ilg3gGewQ5U/maxresdefault.jpg`,
+    portfolio: true,
   },
   {
     type: Type.PAPER,
     title: `RNN/LSTM Headline Generator`,
     text: ``,
     pdf: `/assets/finalreport.pdf`,
-    image: `https://www.iarai.ac.at/wp-content/uploads/2021/02/MC-LSTM.jpg`
+    image: `https://www.iarai.ac.at/wp-content/uploads/2021/02/MC-LSTM.jpg`,
+    portfolio: true,
   },
   {
     type: Type.NOTE,
@@ -77,8 +80,6 @@ export const blogs: Array<BlogEntry> = [
   ## Finality
   How immutable the blockchain is
   
-  
-  
   ## Conclusion
   Nodes are validated on:
   - Time (staked?)
@@ -97,8 +98,40 @@ export const blogs: Array<BlogEntry> = [
   `,
   },
   {
+    type: Type.PAPER,
+    title: `Introduction to Disciplines & Wicked Problem`,
+    text: ``,
+    pdf: `/assets/ENGW project 1.pdf`,
+    image: `http://economicstudents.com/wp-content/uploads/2014/04/Friedrich-Hayek-3-768x435.jpg`,
+    portfolio: true,
+  },
+  {
+    type: Type.PAPER,
+    title: `Real-Time Head Tracking with Reinforcement Learning`,
+    text: ``,
+    pdf: `/assets/Robotics Final Project Report.pdf`,
+    image: `https://store-guides2.djicdn.com/guides/wp-content/uploads/2018/06/Spark-ActiveTrack-Submodes-1.png`,
+    portfolio: true,
+  },
+  {
+    type: Type.PAPER,
+    title: `Analogues of Human Bias in Neural Networks`,
+    text: ``,
+    pdf: `/assets/Essay 2.pdf`,
+    image: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3j19_ImCnHqOuTfq5cXzn_9mQ-Dr1osyARRIqVRIvqI_QU0rOVgPXHqeegBycQuJQ-0&usqp=CAU`,
+    portfolio: true,
+  },
+  {
+    type: Type.PAPER,
+    title: `Mitigating the Double-Edged Sword of Technology`,
+    text: ``,
+    pdf: `/assets/FinalDraft.pdf`,
+    image: `https://qph.fs.quoracdn.net/main-qimg-8dc90320e6ab60ac07c9133bca190a93-pjlq`,
+    portfolio: true,
+  },
+  {
     type: Type.IDEA,
-    title: `Proof of selection ideas`,
+    title: `Proof of Selection Ideas`,
     image: `https://veritusgroup.com/wp-content/uploads/2017/01/consensus-accuracy-2.jpg`,
     text: `
   #### How to incentivize transaction processing?
@@ -115,8 +148,8 @@ export const blogs: Array<BlogEntry> = [
   
   **Scoring:** When a node proposes a block, the other nodes score it based on:
   1. How similar it is to their own
-    1. *Whether transactions are in order
-    2.* *Whether there are missing transactions*
+    a. *Whether transactions are in order*
+    b. *Whether there are missing transactions*
   2. How much the node is charging??
   3. Whether the proposer has been active (sent updates to other nodes)
   
