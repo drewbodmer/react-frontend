@@ -32,10 +32,8 @@ function App() {
     } else if (tab === "logout") {
       localStorage.setItem('token', "");
       return <SearchUpload />
-    } else if (tab === "search_tracking") {
+    } else if (tab === "searchTracking") {
       return <SearchTracking />
-    } else if (tab === "search_tracking_upload") {
-      return <SearchUpload />
     } else if (tab === "dsresume") {
       return <DataScience />
     } else if (tab === "csresume") {

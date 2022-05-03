@@ -16,7 +16,13 @@ interface NavTab {
 export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
   // const token = React.useContext(TokenContext);
   const token = localStorage.getItem('token');
-  console.log(token);
+
+  function displayProjects() {
+    if (token === "searchTracking") {
+
+    }
+  }
+
   function displayLoginOptions() {
     if (token !== "" && token !== undefined && token !== null) {
       return (
@@ -32,9 +38,9 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
     } else {
       return (
         <>
-          {/* <Nav.Link href="" eventKey="search_tracking">
+          <Nav.Link href="" eventKey="search_tracking">
             Search Tracking
-          </Nav.Link> */}
+          </Nav.Link>
           <Nav.Link className="navbar-link" href="" eventKey="login">
             Login
           </Nav.Link>
@@ -69,15 +75,15 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
               {/* <Nav.Link href="" eventKey="about">
                 About
               </Nav.Link> */}
-              {/* <NavDropdown className="navbar-link" title="Blog" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="" eventKey="blog">
-                  General
+              <NavDropdown className="navbar-link" title="Projects" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="" eventKey="searchTracking">
+                  Search Tracking
                 </NavDropdown.Item>
-                <NavDropdown.Item href="" eventKey="portfolio">
-                  Writing Final Portfolio
-                </NavDropdown.Item>
-              </NavDropdown> */}
-              {displayLoginOptions()}
+                {/* <NavDropdown.Item href="" eventKey="dcgan">
+                  DCGAN
+                </NavDropdown.Item> */}
+              </NavDropdown>
+              {/* {displayLoginOptions()} */}
               <NavDropdown className="navbar-link" title="Resume" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="" eventKey="csresume">
                   Software Engineering
