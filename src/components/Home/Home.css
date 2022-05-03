@@ -18,7 +18,14 @@
 }
 
 .piccreds {
-  font-size: 2vh;
+  font-size: 1.5vh;
+  font-weight: 200;
+  font-style: bold;
+  color: #d0d0d0;
+}
+
+.socials-links {
+  font-size: 1.1vw;
   font-weight: 200;
   font-style: bold;
   color: #d0d0d0;

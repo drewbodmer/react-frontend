@@ -34,13 +34,13 @@ export function Home() {
           </div>
           <hr className="solid" style={{ color: "white", width: "80%", margin: "auto", marginBottom: "5vh" }}></hr>
           <ul id="Homelist">
-            <li id="Homelistitem" className="subtitle piccreds">
-              <a className="subtitle piccreds" style={{ textDecoration: "none" }} href="https://www.linkedin.com/in/drew-bodmer">Linkedin</a>
+            <li id="Homelistitem" className="subtitle socials-links">
+              <a className="subtitle socials-links" style={{ textDecoration: "none" }} href="https://www.linkedin.com/in/drew-bodmer">Linkedin</a>
             </li>
-            <li id="Homelistitem" className="subtitle piccreds" >
-              <a className="subtitle piccreds" style={{ textDecoration: "none" }} href="https://github.com/drewbodmer">GitHub</a>
+            <li id="Homelistitem" className="subtitle socials-links" >
+              <a className="subtitle socials-links" style={{ textDecoration: "none" }} href="https://github.com/drewbodmer">GitHub</a>
             </li>
-            <li id="Homelistitem" className="subtitle piccreds" >
+            <li id="Homelistitem" className="subtitle socials-links" >
               drew.bodmer@gmail.com
             </li>
           </ul>

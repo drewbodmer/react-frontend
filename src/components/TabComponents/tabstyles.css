@@ -50,6 +50,7 @@
 }
 
 .my-masonry-grid {
+  padding-left: 20px;
   margin: auto;
   display: -webkit-box;
   /* Not needed if autoprefixing */

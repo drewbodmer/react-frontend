@@ -30,6 +30,14 @@ export default function Blog() {
     }
     return <></>
   }
+  const displayMedia = (entry: BlogEntry): JSX.Element => {
+    if (entry.type === Type.MEDIA) {
+      return (<div style={{ height: "80vh" }}>
+        <iframe src={entry.media} width="100%" height="100%" frameBorder="0" seamless={true} />
+      </div>);
+    }
+    return <></>
+  }
 
   const displayFooter = (flag: boolean): JSX.Element => {
     if (flag) {
@@ -45,7 +53,7 @@ export default function Blog() {
   }
   const breakpointColumnsObj = {
     default: 4,
-    1100: 3,
+    1300: 3,
     800: 2,
     600: 1
   };
@@ -58,7 +66,7 @@ export default function Blog() {
         {Array.from(blogs).map((entry, idx) => {
           return (
             <Container className="grid-item" style={{ padding: "15px" }}>
-              <Card className="card-subtitle card-pretty" style={{ width: "100%" }} onClick={handleShow(idx)}>
+              <Card className="card-subtitle card-pretty" style={{ width: "95%" }} onClick={handleShow(idx)}>
                 <Card.Header className="card-subtitle" style={{ fontSize: '1vh' }}>{blogs[idx].type}</Card.Header>
                 <Card.Img variant="top" src={blogs[idx].image} />
                 <Card.Body>
@@ -77,6 +85,7 @@ export default function Blog() {
                 </Modal.Header>
                 <Modal.Body>
                   {displayPDF(entry)}
+                  {displayMedia(entry)}
                   <ReactMarkdown>{blogs[idx].text}</ReactMarkdown>
                 </Modal.Body>
                 {entry.type === Type.PAPER ? displayFooter(false) : displayFooter(true)}

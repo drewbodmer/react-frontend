@@ -14,7 +14,7 @@ export interface BlogEntry {
   text: string;
   image?: string;
   pdf?: string;
-  portfolio?: boolean;
+  media?: string;
 }
 
 export const blogs: Array<BlogEntry> = [
@@ -24,7 +24,6 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/backprop.pdf`,
     image: `https://i.ytimg.com/vi/Ilg3gGewQ5U/maxresdefault.jpg`,
-    portfolio: true,
   },
   {
     type: Type.PAPER,
@@ -32,7 +31,6 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/finalreport.pdf`,
     image: `https://www.iarai.ac.at/wp-content/uploads/2021/02/MC-LSTM.jpg`,
-    portfolio: true,
   },
   {
     type: Type.NOTE,
@@ -103,7 +101,6 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/ENGW project 1.pdf`,
     image: `http://economicstudents.com/wp-content/uploads/2014/04/Friedrich-Hayek-3-768x435.jpg`,
-    portfolio: true,
   },
   {
     type: Type.PAPER,
@@ -111,7 +108,6 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/Robotics Final Project Report.pdf`,
     image: `https://store-guides2.djicdn.com/guides/wp-content/uploads/2018/06/Spark-ActiveTrack-Submodes-1.png`,
-    portfolio: true,
   },
   {
     type: Type.PAPER,
@@ -119,7 +115,6 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/Essay 2.pdf`,
     image: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3j19_ImCnHqOuTfq5cXzn_9mQ-Dr1osyARRIqVRIvqI_QU0rOVgPXHqeegBycQuJQ-0&usqp=CAU`,
-    portfolio: true,
   },
   {
     type: Type.PAPER,
@@ -127,8 +122,14 @@ export const blogs: Array<BlogEntry> = [
     text: ``,
     pdf: `/assets/FinalDraft.pdf`,
     image: `https://qph.fs.quoracdn.net/main-qimg-8dc90320e6ab60ac07c9133bca190a93-pjlq`,
-    portfolio: true,
   },
+  // {
+  //   type: Type.MEDIA,
+  //   title: `Europe 2019 - GoPro`,
+  //   text: ``,
+  //   media: `https://www.youtube.com/watch?v=5gApqJeAgNI&t=222s`,
+  //   image: `https://i.ytimg.com/vi/5gApqJeAgNI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBseYM-7wOq2nNZhDOX1MhScIzgcw`,
+  // },
   {
     type: Type.IDEA,
     title: `Proof of Selection Ideas`,
