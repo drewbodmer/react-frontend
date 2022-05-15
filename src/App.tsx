@@ -4,9 +4,10 @@ import { NavbarComponent } from "./components/Navbar/Navbar";
 import About from "./components/TabComponents/AboutComponent";
 import Blog from "./components/TabComponents/BlogComponent";
 import { Login } from "./components/Login/LoginComponent";
-import { SearchTracking } from "./components/SearchTracking/searchTracking";
+import { SearchTracking } from "./components/Projects/searchTracking";
+import { Dcgan } from "./components/Projects/DCGAN";
 import { TokenContext } from "./context/GlobalState";
-import { SearchUpload } from "./components/SearchTracking/SearchTrackingUpload";
+import { SearchUpload } from "./components/Projects/SearchTrackingUpload";
 import { SoftwareEngineering, DataScience } from "./components/TabComponents/Resumes";
 import { Home } from "./components/Home/Home";
 
@@ -27,13 +28,15 @@ function App() {
       return <Blog />;
     } else if (tab === "home") {
       return <Home />;
-    } else if (tab === "login") {
-      return <Login login={handleLogin} />
-    } else if (tab === "logout") {
-      localStorage.setItem('token', "");
-      return <SearchUpload />
+      // } else if (tab === "login") {
+      //   return <Login login={handleLogin} />
+      // } else if (tab === "logout") {
+      //   localStorage.setItem('token', "");
+      //   return <SearchUpload />
     } else if (tab === "searchTracking") {
       return <SearchTracking />
+    } else if (tab === "dcgan") {
+      return <Dcgan />
     } else if (tab === "dsresume") {
       return <DataScience />
     } else if (tab === "csresume") {

@@ -79,9 +79,11 @@ export function NavbarComponent({ changeTab }: NavTab): JSX.Element {
                 <NavDropdown.Item href="" eventKey="searchTracking">
                   Search Tracking
                 </NavDropdown.Item>
-                {/* <NavDropdown.Item href="" eventKey="dcgan">
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item href="" eventKey="dcgan">
                   DCGAN
-                </NavDropdown.Item> */}
+                </NavDropdown.Item>
               </NavDropdown>
               {/* {displayLoginOptions()} */}
               <NavDropdown className="navbar-link" title="Resume" id="navbarScrollingDropdown">

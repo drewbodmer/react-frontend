@@ -43,12 +43,16 @@
 
 .background {
   display: block;
-  overflow: auto;
-  background: url("./data/newhome1.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  background: url("./data/newhome1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 .modal-open {
