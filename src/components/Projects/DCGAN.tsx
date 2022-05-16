@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import { Button, Card } from "react-bootstrap";
 import '../TabComponents/tabstyles.css';
 import './searchTracking.css';
@@ -24,6 +23,7 @@ export function Dcgan() {
               Adversarial Network (DCGAN) trained on the MNIST-fashion dataset to create
               (somewhat) realistic images of clothing. Each one of these images is generated
               by running a heroku-hosted model inference. Try hitting the button to see more examples.
+              The image may take a few seconds to load.
             </p>
           </Card.Body>
           <div style={{ margin: 'auto', paddingBottom: "10px" }}>
