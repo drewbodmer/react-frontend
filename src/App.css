@@ -1,5 +1,4 @@
 .App {
-  /* height: 100vh; */
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top left;
@@ -49,10 +48,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat; */
-  /* background-size: cover; */
 }
 
 .modal-open {
