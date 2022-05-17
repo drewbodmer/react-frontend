@@ -23,7 +23,7 @@ export function Dcgan() {
               Adversarial Network (DCGAN) trained on the MNIST-fashion dataset to create
               (somewhat) realistic images of clothing. Each one of these images is generated
               by running a heroku-hosted model inference. Try hitting the button to see more examples.
-              The image may take a few seconds to load.
+              Note: The image may take a minute to load.
             </p>
           </Card.Body>
           <div style={{ margin: 'auto', paddingBottom: "10px" }}>
